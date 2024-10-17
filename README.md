@@ -67,5 +67,5 @@ To get a copy of the project up and running on your local machine for developmen
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/gitHubRepoSearchApp.git
-   cd gitHubRepoSearchApp
+  https://github.com/BARDAVAL-JAGADEESH/github_repo_search.git
+   cd gthub_repo_searc
