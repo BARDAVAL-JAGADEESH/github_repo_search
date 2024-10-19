@@ -1,5 +1,5 @@
 package com.bardaval.githubreoshow
-
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import retrofit2.Retrofit
@@ -13,8 +13,11 @@ import kotlinx.coroutines.launch
 class GitHubViewModel : ViewModel() {
     private val api: GitHubApi
 
-    var repositories = mutableListOf<Repository>()
-    var errorMessage: String? = null
+    // Make repositories a MutableStateList for reactivity
+    var repositories = mutableStateOf<List<Repository>>(listOf())
+        private set
+    var errorMessage = mutableStateOf<String?>(null)
+        private set
 
     init {
         val retrofit = Retrofit.Builder()
@@ -33,17 +36,15 @@ class GitHubViewModel : ViewModel() {
                     response: Response<RepositoryResponse>
                 ) {
                     if (response.isSuccessful) {
-                        repositories.clear()
-                        response.body()?.items?.let {
-                            repositories.addAll(it)
-                        }
+                        // Update the state with the new list of repositories
+                        repositories.value = response.body()?.items ?: listOf()
                     } else {
-                        errorMessage = "Error: ${response.message()}"
+                        errorMessage.value = "Error: ${response.message()}"
                     }
                 }
 
                 override fun onFailure(call: Call<RepositoryResponse>, t: Throwable) {
-                    errorMessage = t.message
+                    errorMessage.value = t.message
                 }
             })
         }
@@ -67,4 +68,53 @@ class GitHubViewModel : ViewModel() {
             }
         })
     }
+
+    fun getRepositoryDetails(owner: String, repo: String, callback: (Repository?) -> Unit) {
+        api.getRepository(owner, repo).enqueue(object : Callback<Repository> {
+            override fun onResponse(call: Call<Repository>, response: Response<Repository>) {
+                if (response.isSuccessful) {
+                    callback(response.body())
+                } else {
+                    callback(null)
+                }
+            }
+
+            override fun onFailure(call: Call<Repository>, t: Throwable) {
+                callback(null)
+            }
+        })
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

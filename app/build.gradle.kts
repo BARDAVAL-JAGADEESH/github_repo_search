@@ -81,4 +81,10 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.15.0")
     kapt ("com.github.bumptech.glide:compiler:4.15.0")
     implementation ("androidx.compose.material3:material3:1.1.0")
+
+
+
+    // Coil for image loading in Jetpack Compose
+    implementation ("io.coil-kt:coil-compose:2.1.0")
+
 }
