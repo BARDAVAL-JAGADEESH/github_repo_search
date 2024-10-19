@@ -21,7 +21,8 @@ the Home screen for searching and displaying repositories, and the Repo Details 
 
 ## Screenshots
 
-![Home Screen](screenshots/home_screen.png)  
+![Home Screen](![homescreen](https://github.com/user-attachments/assets/add2141a-6379-4635-9404-36cb5a08fd77)
+)  
 *Home Screen with search functionality.*
 
 ![Repo Details Screen](screenshots/repo_details_screen.png)  
