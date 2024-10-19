@@ -21,12 +21,26 @@ the Home screen for searching and displaying repositories, and the Repo Details 
 
 ## Screenshots
 
-![Home Screen](![homescreen](https://github.com/user-attachments/assets/add2141a-6379-4635-9404-36cb5a08fd77)
-)  
-*Home Screen with search functionality.*
+    #Homescreen
+<img src="https://github.com/user-attachments/assets/44c13867-286f-4838-9baf-416bd8bc0bfb" alt="homescreen" width="200"/> 
 
-![Repo Details Screen](screenshots/repo_details_screen.png)  
-*Repo Details Screen showing repository information.*
+
+
+
+Listof Repositories displays 
+                             
+<img src="https://github.com/user-attachments/assets/e5deda22-5c10-4955-8d43-0a92b3a686ef" alt="listofrepo" width="200"/>  
+      Details of repo  --> <img src="https://github.com/user-attachments/assets/8f2494d7-51d2-4e8f-a9bf-6f1d40da1155" alt="detailscreen" width="200"/>
+      
+
+
+  opening in web ---> <img src="https://github.com/user-attachments/assets/dfb5dee5-3206-4919-8085-b3e113a1bb36" alt="openinweb" width="200"/>
+
+
+
+
+
+
 
 ## Technologies Used
 
