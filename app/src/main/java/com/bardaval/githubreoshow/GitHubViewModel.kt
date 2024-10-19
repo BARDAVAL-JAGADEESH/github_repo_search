@@ -39,11 +39,12 @@ class GitHubViewModel : ViewModel() {
                         // Update the state with the new list of repositories
                         repositories.value = response.body()?.items ?: listOf()
                     } else {
-                        errorMessage.value = "Error: ${response.message()}"
+                        errorMessage.value = "error: ${response.message()}"
                     }
                 }
 
                 override fun onFailure(call: Call<RepositoryResponse>, t: Throwable) {
+
                     errorMessage.value = t.message
                 }
             })
