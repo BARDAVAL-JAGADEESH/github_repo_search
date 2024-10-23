@@ -27,14 +27,14 @@ the Home screen for searching and displaying repositories, and the Repo Details 
 
 
 
+
 Listof Repositories displays 
                              
 <img src="https://github.com/user-attachments/assets/e5deda22-5c10-4955-8d43-0a92b3a686ef" alt="listofrepo" width="200"/>  
-      Details of repo  --> <img src="https://github.com/user-attachments/assets/8f2494d7-51d2-4e8f-a9bf-6f1d40da1155" alt="detailscreen" width="200"/>
+      Details of repo  --> <img src="https://github.com/user-attachments/assets/370b4024-8751-4743-b0e6-fc4076481f74" alt="detailscreen" width="200"/>
       
 
 
-  opening in web ---> <img src="https://github.com/user-attachments/assets/dfb5dee5-3206-4919-8085-b3e113a1bb36" alt="openinweb" width="200"/>
 
 
 
